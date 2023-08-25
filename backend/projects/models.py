@@ -22,3 +22,6 @@ class Proyect(models.Model):
     created_at = models.DateTimeField()
     updated_at = models.DateTimeField()
     pushed_at = models.DateTimeField()
+
+    def __str__(self) -> str:
+        return self.name

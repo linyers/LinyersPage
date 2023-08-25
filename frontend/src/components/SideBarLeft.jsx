@@ -21,7 +21,7 @@ export default function SideBarLeft() {
             <a href="/#about">ABOUT</a>
           </li>
           <li>
-            <Link to="/proyects">PROYECTS</Link>
+            <Link to="/projects">PROYECTS</Link>
           </li>
           <li>
             <Link to="/blog">BLOG</Link>

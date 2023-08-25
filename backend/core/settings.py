@@ -26,6 +26,9 @@ SECRET_KEY = 'django-insecure-g&906mhjr0fvw2mgg3-edr)5@%$xtci9c2ck-60veq^+1w**y3
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+# Cors authorization
+CORS_ALLOW_ALL_ORIGINS = True
+
 ALLOWED_HOSTS = []
 
 
@@ -41,14 +44,16 @@ INSTALLED_APPS = [
 
     'rest_framework',
     'corsheaders',
+    'ckeditor',
 
     'projects',
+    'blog',
 ]
 
 MIDDLEWARE = [
+    "corsheaders.middleware.CorsMiddleware",
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
-    "corsheaders.middleware.CorsMiddleware",
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -77,8 +82,7 @@ TEMPLATES = [
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': (
         'rest_framework_simplejwt.authentication.JWTAuthentication',
-    )
-
+    ),
 }
 
 SIMPLE_JWT = {

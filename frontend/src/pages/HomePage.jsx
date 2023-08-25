@@ -13,7 +13,6 @@ export default function HomePage() {
       >
         <h1 className="text-9xl font-light">Linyers</h1>
         <h2 className="text-5xl font-light">Ariel Ignacio Jimenez</h2>
-        <h3 className="text-5xl font-light">Portfolio</h3>
         <a
           className="text-5xl mt-10 transition duration-300 ease-in-out hover:animate-bounce text-white"
           href="#about"
