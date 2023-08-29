@@ -1,1 +1,23 @@
+.app {
+  display: flex;
+  height: 100vh;
+}
 
+.flex-container {
+  display: flex;
+  flex: 1;
+}
+
+.sidebar {
+  flex: 0 0 16.5vw;
+}
+
+.content {
+  width: 98.72vw;
+}
+
+@media screen and (max-width: 1024px) {
+  .sidebar{
+      display:none;
+  }
+}

@@ -1,7 +1,7 @@
-from rest_framework.decorators import api_view
+from rest_framework.decorators import api_view, permission_classes
 from rest_framework.response import Response
 from rest_framework.generics import ListAPIView
-
+from rest_framework.permissions import IsAuthenticated
 
 from .models import Proyect
 from .services import get_repos
@@ -16,6 +16,7 @@ class ProyectsView(ListAPIView):
 
 
 @api_view(['POST'])
+@permission_classes([IsAuthenticated])
 def Update_or_create_projects(request):
     response = get_repos()
 
@@ -29,11 +30,10 @@ def Update_or_create_projects(request):
             } for r in response)
             
     for repo in repos:
-        if repo['name'] != '30-Days-Of-Python':
-            proyect = Proyect.objects.filter(id=repo.get('id'))
-            if proyect:
-                proyect.update(**repo)
-            else:
-                Proyect.objects.update_or_create(**repo)
+        proyect = Proyect.objects.filter(id=repo.get('id'))
+        if proyect:
+            proyect.update(**repo)
+        else:
+            Proyect.objects.update_or_create(**repo)
     
     return Response({'message': 'repos created or updated successfully'})

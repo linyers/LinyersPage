@@ -27,7 +27,10 @@ SECRET_KEY = 'django-insecure-g&906mhjr0fvw2mgg3-edr)5@%$xtci9c2ck-60veq^+1w**y3
 DEBUG = True
 
 # Cors authorization
-CORS_ALLOW_ALL_ORIGINS = True
+CORS_ALLOWED_ORIGINS = [
+    "http://localhost:5173",
+    "http://127.0.0.1:5173",
+]
 
 ALLOWED_HOSTS = []
 
@@ -48,6 +51,7 @@ INSTALLED_APPS = [
 
     'projects',
     'blog',
+    'base',
 ]
 
 MIDDLEWARE = [

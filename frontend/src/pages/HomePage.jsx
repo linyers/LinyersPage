@@ -23,19 +23,19 @@ export default function HomePage() {
 
       <div
         id="about"
-        className="flex-grow flex gap-20 flex-col justify-center items-center p-48 h-screen bg-red-950"
+        className="flex-grow flex md:gap-20 gap-10 flex-col justify-center items-center md:p-48 p-10 h-screen bg-red-950"
       >
-        <div className="flex gap-10 flex-row">
+        <div className="flex gap-10 items-center md:flex-row flex-col">
           <div>
             <img
-              className="w-96 rounded-full"
+              className="md:w-96 w-48 rounded-full"
               src="/public/profilepic.jpg"
               alt=""
             />
           </div>
           <div className="gap-10 flex flex-col">
-            <h3 className="text-3xl">¡Bienvenido!</h3>
-            <div className="gap-4 flex flex-col">
+            <h3 className="text-3xl md:text-left text-center">¡Bienvenido!</h3>
+            <div className="gap-4 flex md:text-left text-center flex-col">
               <p>
                 Mi nombre es Ignacio. Soy programador fullstack, utilizo Django con Python y React con JavaScript. Para
                 cualquier consulta puede contactarme por los medios que ve

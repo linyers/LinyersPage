@@ -22,6 +22,7 @@ class Proyect(models.Model):
     created_at = models.DateTimeField()
     updated_at = models.DateTimeField()
     pushed_at = models.DateTimeField()
+    recomended = models.BooleanField(default=False)
 
-    def __str__(self) -> str:
+    def __str__(self):
         return self.name

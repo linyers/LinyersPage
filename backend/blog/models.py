@@ -8,7 +8,7 @@ import os
 
 
 def post_pic_path(instance, filename):
-    image = 'post/{0}/image.jpg'.format(instance.name)
+    image = 'post/{0}/image.jpg'.format(instance.title)
     full_path = os.path.join(settings.MEDIA_ROOT, image)
 
     if os.path.exists(full_path):
@@ -43,7 +43,7 @@ def set_slug(sender, instance, *args, **kwargs):
     
     id = str(uuid.uuid4())
     title = str(instance.title).replace(' ', '-')
-    instance.slug = slugify(f'{id[:8]}_{title}')
+    instance.slug = slugify(f'{id[:8]}-{title}')
 
 
 pre_save.connect(set_slug, sender=Post)

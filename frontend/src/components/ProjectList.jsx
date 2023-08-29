@@ -14,8 +14,8 @@ export default function ProjectList() {
   }, []);
 
   return (
-    <div className="w-screen justify-center items-center flex">
-      <div className="grid grid-cols-3 gap-3">
+    <div className="justify-center items-center flex">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
         {project?.map((p, i) => {
           return <ProjectCard key={i} p={p} />;
         })}
