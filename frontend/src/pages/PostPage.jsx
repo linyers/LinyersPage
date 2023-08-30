@@ -12,7 +12,7 @@ export default function PostPage() {
         </h3>
 
         <div className="px-5">
-          <PostsList slug={params.slug} />
+          <PostsList slug={params.slug} pathName='/blog' />
         </div>
       </div>
     </div>

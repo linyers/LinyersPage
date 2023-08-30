@@ -10,9 +10,15 @@ export default function ProjectCard({ p }) {
     >
       <h1 className="font-bold text-2xl mb-5">{p.name}</h1>
       <div className="md:p-0 p-3">
-      <img className="rounded-lg md:ring-4 ring-8 ring-red-900 mb-10" src={p.image} alt="" />
+        {p.image ? (
+          <img
+            className="rounded-lg md:ring-4 ring-8 ring-red-900 mb-10"
+            src={p.image}
+            alt=""
+          />
+        ) : null}
       </div>
-      
+
       <p className="mb-5">{p.description}</p>
       <p>Created at {moment(p.created_at).fromNow()}</p>
       <p>Updated at {moment(p.pushed_at).fromNow()}</p>

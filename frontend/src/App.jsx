@@ -18,9 +18,12 @@ function App() {
             <Routes>
               <Route path="/" element={<HomePage />} />
               <Route path="/projects" element={<ProjectsPage />} />
+              <Route path="/projects/page/:p" element={<ProjectsPage />} />
               <Route path="/blog" element={<BlogPage />} />
+              <Route path="/blog/page/:p" element={<BlogPage />} />
               <Route path="/blog/:slug" element={<PostPage />} />
               <Route path="/blog/category/:name" element={<CategoryPage />} />
+              <Route path="/blog/category/:name/page/:p" element={<CategoryPage />} />
             </Routes>
           </div>
         </div>

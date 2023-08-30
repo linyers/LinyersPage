@@ -11,7 +11,7 @@ export default function ProyectsPage() {
         <p className="md:text-3xl text-2xl md:px-0 px-3 text-center text-red-300">Si quiere consultar un proyecto haga click en la carta y lo llevara al repositorio de GitHub</p>
 
         <div className="p-5 flex justify-center items-center">
-          <ProjectList />
+          <ProjectList pathName='/projects' />
         </div>
       </div>
     </div>

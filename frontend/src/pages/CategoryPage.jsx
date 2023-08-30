@@ -14,7 +14,7 @@ export default function CategoryPage() {
         <h4 className="text-left px-5 mt-10 text-5xl font-light">Categoria: {params.name}</h4>
 
         <div className="px-5">
-          <PostsList name={params.name} />
+          <PostsList name={params.name} pathName={`/blog/category/${params.name}`} />
         </div>
       </div>
     </div>

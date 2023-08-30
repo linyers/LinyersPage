@@ -8,7 +8,7 @@ export default function BlogPage() {
         <h3 className="text-left p-5 my-5 text-5xl font-light">El diario de Linyers</h3>
 
         <div className="px-5">
-          <PostsList />
+          <PostsList pathName="/blog" />
         </div>
       </div>
     </div>
