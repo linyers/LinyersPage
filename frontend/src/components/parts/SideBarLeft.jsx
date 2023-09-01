@@ -17,7 +17,7 @@ export default function SideBarLeft() {
               <a href="/#top">
                 <img
                   className="rounded-full w-36"
-                  src="/public/profilepic.jpg"
+                  src="/profilepic.jpg"
                   alt=""
                 />
               </a>
@@ -107,7 +107,7 @@ export default function SideBarLeft() {
                   <a href="/#top">
                     <img
                       className="rounded-full w-36"
-                      src="/public/profilepic.jpg"
+                      src="/profilepic.jpg"
                       alt=""
                     />
                   </a>

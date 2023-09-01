@@ -29,7 +29,7 @@ export default function HomePage() {
           <div>
             <img
               className="md:w-96 w-48 rounded-full"
-              src="/public/profilepic.jpg"
+              src="/profilepic.jpg"
               alt=""
             />
           </div>
