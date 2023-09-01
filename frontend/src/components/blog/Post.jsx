@@ -1,7 +1,6 @@
 import React from "react";
-import SocialLinks from "./SocialLinks";
+import SocialLinks from "../parts/SocialLinks";
 import { Link } from "react-router-dom";
-import CategoryPage from '../pages/CategoryPage'
 import moment from "moment";
 
 export default function Post({ p, slug }) {
@@ -16,7 +15,7 @@ export default function Post({ p, slug }) {
       {slug ? (
         <h1 className="font-bold md:text-6xl text-4xl mb-5">{p.title}</h1>
       ) : (
-        <Link to={`/blog/${p.slug}`} className="flex w-0">
+        <Link to={`/blog/${p.slug}`} className="flex">
           <h1 className="font-bold hover:text-red-400 md:text-6xl text-4xl mb-2">
             {p.title}
           </h1>

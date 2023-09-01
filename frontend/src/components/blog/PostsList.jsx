@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import Post from "./Post";
-import PaginationFooter from "../components/PaginationFooter";
-import { getPosts, getPost, getCategory } from "../utils/projects.api";
+import PaginationFooter from "../parts/PaginationFooter";
+import { getPosts, getPost, getCategory } from "../../utils/projects.api";
 
 export default function PostsList({ slug, name, pathName }) {
   const [post, setPost] = useState([]);

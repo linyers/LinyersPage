@@ -1,4 +1,4 @@
-import PostsList from "../components/PostsList";
+import PostsList from "../components/blog/PostsList";
 import { useParams } from "react-router-dom";
 
 export default function PostPage() {

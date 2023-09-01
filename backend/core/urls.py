@@ -8,7 +8,7 @@ urlpatterns = [
     path(f'{ADMIN_URL}/', admin.site.urls),
     path('api/', include('projects.urls', namespace='projects')),
     path('api/', include('blog.urls', namespace='blog')),
-    path('api/tokens', include('base.urls', namespace='base')),
+    path('api/tokens/', include('base.urls', namespace='base')),
 ]
 
 if settings.DEBUG:

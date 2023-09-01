@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const pageAPI = axios.create({
-    baseURL: "http://127.0.0.1:8000/api/",
+    baseURL: "http://18.220.183.229:8000/api/",
 })
 
 export const getProjects = (p=1) => {

@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { getProjects } from "../utils/projects.api";
+import { getProjects } from "../../utils/projects.api";
 import ProjectCard from "./ProjectCard";
-import PaginationFooter from "./PaginationFooter";
+import PaginationFooter from "../parts/PaginationFooter";
 
 export default function ProjectList({ pathName }) {
   const [project, setProject] = useState([]);
