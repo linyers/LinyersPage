@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const pageAPI = axios.create({
-    baseURL: "//linyers.online:8000/api/",
+    baseURL: "//linyers.duckdns.org:8000/api/",
 })
 
 export const getProjects = (p=1) => {
