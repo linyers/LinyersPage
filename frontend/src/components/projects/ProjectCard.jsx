@@ -12,6 +12,7 @@ export default function ProjectCard({ p }) {
       <div className="md:p-0 p-3">
         {p.image ? (
           <img
+            loading="lazy"
             className="rounded-lg md:ring-4 ring-8 ring-red-900 mb-10"
             src={p.image}
             alt=""

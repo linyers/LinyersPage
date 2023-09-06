@@ -51,7 +51,7 @@ export default function SideBarLeft() {
         </div>
       </div>
 
-      <div className="bg-red-900 py-3 lg:hidden fixed top-0 left-0 right-0 shadow-md">
+      <div className="bg-red-900 py-3 z-50 lg:hidden fixed top-0 left-0 right-0 shadow-md">
         <button className="ml-4 bg-red-950 hover:border-red-700" onClick={() => setOpen(true)}>
           <svg
             xmlns="http://www.w3.org/2000/svg"

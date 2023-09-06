@@ -28,6 +28,7 @@ export default function Post({ p, slug }) {
       {slug ? (
         <div>
           <img
+            loading="lazy"
             className="rounded-lg md:w-3/4 mt-5 mb-10"
             src={p.image}
             alt=""
@@ -38,6 +39,7 @@ export default function Post({ p, slug }) {
       ) : p.image ? (
         <Link to={`/blog/${p.slug}`} className="flex md:w-3/4">
           <img
+            loading="lazy"
             className="rounded-lg hover:opacity-75 mb-10"
             src={p.image}
             alt=""
@@ -45,6 +47,7 @@ export default function Post({ p, slug }) {
         </Link>
       ) : (
         <img
+          loading="lazy"
           className="rounded-lg hover:opacity-75 mb-10"
           src={p.image}
           alt=""

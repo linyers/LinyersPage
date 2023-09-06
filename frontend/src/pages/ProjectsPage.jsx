@@ -4,7 +4,7 @@ import ProjectList from "../components/projects/ProjectList";
 export default function ProyectsPage() {
   return (
     <div className="min-h-screen bg-bg-image bg-fixed bg-cover">
-      <div className="flex flex-col gap-36 items-center justify-center">
+      <div className="flex flex-col gap-24 items-center justify-center">
         <h3 className="text-center mt-16 text-9xl font-light">
           Projects
         </h3>
