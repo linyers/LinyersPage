@@ -36,7 +36,9 @@ export default function ProjectList({ pathName }) {
         <>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
             {project?.map((p, i) => {
-              return <ProjectCard key={i} p={p} />;
+              if (p.recomended) {
+                return <ProjectCard key={i} p={p} />;
+              }
             })}
           </div>
           <div className="border-b-4 border-red-950 mt-5 bg-red-900">
