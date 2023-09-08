@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const pageAPI = axios.create({
-    baseURL: "https://linyers.duckdns.org/api/",
+    baseURL: import.meta.env.VITE_API_URL,
 })
 
 export const getProjects = (p=1) => {
