@@ -17,7 +17,7 @@
 }
 
 code {
-  padding: 0.1rem;
+  display: inline-block;
   padding-left: 0.2rem;
   padding-right: 0.2rem;
   background-color: #7f1d1d;
