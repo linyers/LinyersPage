@@ -16,7 +16,7 @@ def proyect_pic_path(instance, filename):
 class Proyect(models.Model):
     id = models.IntegerField(primary_key=True)
     name = models.CharField(max_length=300, unique=False)
-    image = models.ImageField(upload_to=proyect_pic_path, null=True)
+    image = models.ImageField(upload_to=proyect_pic_path, null=True, blank=True)
     description = models.TextField(blank=True, null=True)
     url = models.URLField()
     created_at = models.DateTimeField()

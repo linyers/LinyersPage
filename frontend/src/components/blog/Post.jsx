@@ -6,9 +6,11 @@ import moment from "moment";
 export default function Post({ p, slug }) {
   const body = { __html: p.body };
 
-  const p_regex = /<p\b[^>]*>(.*?)<\/p>/;
-  const match = p.body.match(p_regex);
-  const description = { __html: match[0] };
+  const p_regex = /<p\b[^>]*>(.*?)<\/p>/g;
+  const matches = p.body.match(p_regex) || [];
+
+  const prebody = { __html: matches.slice(0, 3).join("") };
+  const description = { __html: matches[0] };
 
   return (
     <div className="py-14 h-fit">
@@ -26,10 +28,10 @@ export default function Post({ p, slug }) {
         dangerouslySetInnerHTML={description}
       />
       {slug ? (
-        <div>
+        <div className="aspect-auto">
           <img
             loading="lazy"
-            className="rounded-lg md:w-3/4 mt-5 mb-10"
+            className="rounded-lg object-cover w-full h-full mt-5 mb-10"
             src={p.image}
             alt=""
           />
@@ -40,18 +42,13 @@ export default function Post({ p, slug }) {
         <Link to={`/blog/${p.slug}`} className="flex md:w-3/4">
           <img
             loading="lazy"
-            className="rounded-lg hover:opacity-75 mb-10"
+            className="rounded-lg hover:opacity-75 w-full h-full mb-10"
             src={p.image}
             alt=""
           />
         </Link>
       ) : (
-        <img
-          loading="lazy"
-          className="rounded-lg hover:opacity-75 mb-10"
-          src={p.image}
-          alt=""
-        />
+        null
       )}
 
       <div className="flex flex-col-reverse md:flex-row md:gap-20 gap-10">
@@ -61,13 +58,21 @@ export default function Post({ p, slug }) {
             {p.categories.map((c, i) => {
               if (i === p.categories.length - 1) {
                 return (
-                  <Link key={i} className="font-normal" to={`/blog/category/${c.name}`}>
+                  <Link
+                    key={i}
+                    className="font-normal"
+                    to={`/blog/category/${c.name}`}
+                  >
                     <span>{c.name}</span>
                   </Link>
                 );
               } else {
                 return (
-                  <Link key={i} className="font-normal" to={`/blog/category/${c.name}`}>
+                  <Link
+                    key={i}
+                    className="font-normal"
+                    to={`/blog/category/${c.name}`}
+                  >
                     <span>{c.name}, </span>
                   </Link>
                 );
@@ -75,10 +80,25 @@ export default function Post({ p, slug }) {
             })}
           </div>
         </div>
-        <div
-          className="mb-5 flex flex-col gap-5 text-base"
-          dangerouslySetInnerHTML={body}
-        />
+
+        {slug ? (
+          <div
+            className="mb-5 flex flex-col gap-5 text-base"
+            dangerouslySetInnerHTML={body}
+          />
+        ) : (
+          <div>
+            <div
+              className="mb-5 flex flex-col gap-5 text-base"
+              dangerouslySetInnerHTML={prebody}
+            />
+            {matches.length > 3 ? (
+              <Link to={`/blog/${p.slug}`} className="font-bold hover:text-red-400 border-b-2 border-b-red-400">
+                Ver articulo completo...
+              </Link>
+            ) : null}
+          </div>
+        )}
       </div>
     </div>
   );
