@@ -11,10 +11,10 @@ export default function HomePage() {
         id="top"
         className="h-screen flex text-slate-50 flex-col gap-10 text-center items-center justify-center"
       >
-        <h1 className="text-9xl font-light">Linyers</h1>
-        <h2 className="text-5xl font-light">Ariel Ignacio Jimenez</h2>
+        <h1 className="md:text-9xl text-8xl font-light">Linyers</h1>
+        <h2 className="md:text-5xl text-4xl font-light">Ariel Ignacio Jimenez</h2>
         <a
-          className="text-5xl mt-10 transition duration-300 ease-in-out hover:animate-bounce text-white"
+          className="md:text-5xl text-4xl mt-10 transition duration-300 ease-in-out hover:animate-bounce text-white"
           href="#about"
         >
           <FontAwesomeIcon icon={faAngleDoubleDown} />
