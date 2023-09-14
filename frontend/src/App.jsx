@@ -14,7 +14,7 @@ function App() {
       <Router>
         <div className="flex-container">
             <SideBarLeft />
-          <div className="content min-h-screen bg-bg-image bg-fixed bg-cover">
+          <main className="min-h-screen overflow-x-hidden w-screen max-w-screen bg-bg-image bg-fixed bg-cover">
             <Routes>
               <Route path="/" element={<HomePage />} />
               <Route path="/projects" element={<ProjectsPage />} />
@@ -25,7 +25,7 @@ function App() {
               <Route path="/blog/category/:name" element={<CategoryPage />} />
               <Route path="/blog/category/:name/page/:p" element={<CategoryPage />} />
             </Routes>
-          </div>
+          </main>
         </div>
       </Router>
     </div>
